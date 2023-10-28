@@ -1,0 +1,13 @@
+﻿@model SessionWorkshop.Models.UserModel
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <h1>Bienvenido</h1>
+    <form method="post" asp-action="SetName">
+        <label for="UserName">Ingresa tu nombre:</label>
+        <input type="text" id="UserName" name="UserName" required>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</div>

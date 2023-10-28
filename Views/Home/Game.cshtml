@@ -1,0 +1,25 @@
+@model SessionWorkshop.Models.UserModel
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <h1>Bienvenido, @Model.UserName</h1>
+    <p>Valor actual: @Model.Value</p>
+    <form method="post" asp-action="UpdateValue" asp-route-increment="1">
+        <button type="submit">+1</button>
+    </form>
+    <form method="post" asp-action="UpdateValue" asp-route-increment="-1">
+        <button type="submit">-1</button>
+    </form>
+    <form method="post" asp-action="UpdateValue" asp-route-increment="2">
+        <button type="submit">x2</button>
+    </form>
+    <form method="post" asp-action="UpdateValue" asp-route-increment="0">
+        <button type="submit">Random</button>
+    </form>
+<form method="post" asp-action="Logout">
+    <button type="submit">Cerrar sesión</button>
+</form>
+
+</div>
